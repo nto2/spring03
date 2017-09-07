@@ -4,11 +4,11 @@
 	<groupId>com.example</groupId>
 	<artifactId>spring03</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-	
+
 	<build>
 		<plugins>
 			<plugin>
@@ -27,7 +27,7 @@
 				<executions>
 					<execution>
 						<id>scala-compile</id>
-						<phase>process-resources</phase>
+						<phase>compile</phase>
 						<goals>
 							<goal>add-source</goal>
 							<goal>compile</goal>
@@ -35,7 +35,7 @@
 					</execution>
 					<execution>
 						<id>scala-test-compile</id>
-						<phase>process-test-resources</phase>
+						<phase>test-compile</phase>
 						<goals>
 							<goal>testCompile</goal>
 						</goals>
@@ -75,6 +75,11 @@
 			<artifactId>lombok</artifactId>
 			<version>1.16.18</version>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-dbcp2</artifactId>
+			<version>2.1.1</version>
 		</dependency>
 	</dependencies>
 </project>
